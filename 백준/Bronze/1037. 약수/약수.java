@@ -15,7 +15,7 @@ public class Main {
             int a = 0;
             int min = 0;
             int max = 0;
-            for (int i = 0; i < n; i++) {
+ /*           for (int i = 0; i < n; i++) {
                 a = Integer.parseInt(st.nextToken());
                 if (i == 0) {
                     min = a;
@@ -26,6 +26,18 @@ public class Main {
                     max = a;
                 }
 
+            }*/
+            a = Integer.parseInt(st.nextToken());
+            min = a;
+            max = a;
+            while (st.hasMoreTokens()) {
+                a = Integer.parseInt(st.nextToken());
+                if (max < a) {
+                    max = a;
+                }
+                if (min > a) {
+                    min = a;
+                }
             }
             System.out.println(min * max);
         }
